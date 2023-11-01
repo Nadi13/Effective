@@ -12,14 +12,17 @@ import androidx.compose.ui.unit.sp
 
 object AppTheme {
     object BgColors{
-       val primary = Color(color = 0xFFFFFBFE)
+        val primary = Color(color = 0xFFFFFBFE)
         val grey = Color(color = 0xFF1F2430)
         val darkGrey = Color(color = 0xFF050B18)
+        val secondery = Color(color = 0xFF4682B4)
 
     }
     object TextColors{
         val primary = Color(color = 0xFFFFFBFE)
         val grey = Color(color = 0xFF45454D)
+        val secondery = Color(color = 0xFFEEF2FB)
+        val blue = Color(color = 0xFF41A0E7)
     }
 
 
@@ -48,6 +51,35 @@ object AppTheme {
                     fontFamily = FontFamily,
                     fontSize = 12.sp,
                     letterSpacing = 0.5.sp,
+                    platformStyle = PlatformTextStyle(includeFontPadding = false),
+                    lineHeightStyle = LineHeightStyle(
+                        LineHeightStyle.Alignment.Proportional,
+                        LineHeightStyle.Trim.None
+                    ),
+                )
+
+        val Regular_12_19
+            @Composable
+            get() =
+                TextStyle(
+                    fontFamily = FontFamily,
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 12.sp,
+                    lineHeight = 19.sp,
+                    platformStyle = PlatformTextStyle(includeFontPadding = false),
+                    lineHeightStyle = LineHeightStyle(
+                        LineHeightStyle.Alignment.Proportional,
+                        LineHeightStyle.Trim.None
+                    ),
+                )
+
+        val Mon_10
+            @Composable
+            get() =
+                TextStyle(
+                    fontFamily = FontFamily,
+                    fontWeight = FontWeight.Medium,
+                    fontSize = 10.sp,
                     platformStyle = PlatformTextStyle(includeFontPadding = false),
                     lineHeightStyle = LineHeightStyle(
                         LineHeightStyle.Alignment.Proportional,
