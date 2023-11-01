@@ -43,7 +43,7 @@ fun Chip(
         modifier = Modifier
             .background(backgroundColor)
             .padding(horizontal = 8.dp, vertical = 4.dp)
-            .clip(RoundedCornerShape(100)),
+            .clip(shape = RoundedCornerShape(14.dp)),
         contentAlignment = Alignment.Center
     ) {
         Text(

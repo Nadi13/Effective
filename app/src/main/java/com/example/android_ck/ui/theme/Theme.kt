@@ -86,5 +86,20 @@ object AppTheme {
                         LineHeightStyle.Trim.None
                     ),
                 )
+
+        val Bold_16
+            @Composable
+            get() =
+                TextStyle(
+                    fontFamily = FontFamily,
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 16.sp,
+                    letterSpacing = 0.6.sp,
+                    platformStyle = PlatformTextStyle(includeFontPadding = false),
+                    lineHeightStyle = LineHeightStyle(
+                        LineHeightStyle.Alignment.Proportional,
+                        LineHeightStyle.Trim.None
+                    ),
+                )
     }
 }

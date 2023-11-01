@@ -48,6 +48,37 @@ fun DotaScreen() {
 
             )
         }
+        item{
+            VideoPreviewRow(
+                previewRelist = listOf(
+                    R.drawable.bg_video1,
+                    R.drawable.bg_video2,
+                ),
+                contentPadding = PaddingValues(start = 24.dp, end = 24.dp)
+            )
+        }
+        item{
+            Text(
+                text = "Review & Rating",
+                style = AppTheme.TextStyle.Bold_16,
+                color = AppTheme.TextColors.primary,
+                modifier = Modifier.padding(
+                    start = 24.dp,
+                    end = 24.dp,
+                    top = 20.dp,
+                    bottom = 12.dp,
+                )
+            )
+            RatingBlock(
+                rating = 4.9f,
+                reviewCount = "70M",
+                modifier = Modifier.padding(
+                    start = 24.dp,
+                    end = 24.dp,
+                    bottom = 16.dp,
+                )
+            )
+        }
     }
 }
 
