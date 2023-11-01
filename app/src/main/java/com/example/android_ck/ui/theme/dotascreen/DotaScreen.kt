@@ -1,10 +1,14 @@
 package com.example.android_ck
 
+import android.widget.Toast
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.lazy.rememberLazyListState
+import androidx.compose.material3.Divider
 import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -18,6 +22,10 @@ import com.example.android_ck.ui.theme.AppTheme
 fun DotaScreen() {
     val context = LocalContext.current
     val lazyListState = rememberLazyListState()
+    val comments = listOf(
+        "Once you start to learn its secrets, there’s a wild and exciting variety of play here that’s unmatched, even by its peers.",
+        "Once you start to learn its secrets, there’s a wild and exciting variety of play here that’s unmatched, even by its peers."
+    )
 
     LazyColumn(
         state = lazyListState,
@@ -77,6 +85,45 @@ fun DotaScreen() {
                     end = 24.dp,
                     bottom = 16.dp,
                 )
+            )
+        }
+        itemsIndexed(comments){index, item ->
+            CommentBlock(
+                item,
+                modifier = Modifier
+                    .padding(
+                        start = 24.dp,
+                        end = 24.dp,
+                        top = 16.dp,
+                    )
+            )
+            if (index<comments.lastIndex){
+                Divider(
+                    color = AppTheme.BgColors.divider,
+                    thickness = 1.dp,
+                    modifier = Modifier
+                        .padding(
+                            top = 12.dp,
+                            bottom = 10.dp
+                        ),
+                )
+            }
+
+        }
+        item{
+            PrimaryButton(
+                text = "Install",
+                onClick = {
+                    Toast.makeText(context, "CLICKED", Toast.LENGTH_LONG).show()
+                },
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(
+                        start = 24.dp,
+                        end = 24.dp,
+                        top = 20.dp,
+                        bottom = 40.dp,
+                    )
             )
         }
     }

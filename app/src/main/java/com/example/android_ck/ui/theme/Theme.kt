@@ -16,6 +16,7 @@ object AppTheme {
         val grey = Color(color = 0xFF1F2430)
         val darkGrey = Color(color = 0xFF050B18)
         val secondery = Color(color = 0xFF4682B4)
+        val divider = Color(color = 0xFF1A1F29)
 
     }
     object TextColors{
@@ -23,6 +24,7 @@ object AppTheme {
         val grey = Color(color = 0xFF45454D)
         val secondery = Color(color = 0xFFEEF2FB)
         val blue = Color(color = 0xFF41A0E7)
+        val darkGrey = Color(color = 0xFF050B18)
     }
 
 
