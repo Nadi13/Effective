@@ -71,7 +71,7 @@ fun DotaScreen() {
             )
             RatingBlock(
                 rating = 4.9f,
-                reviewCount = "70M",
+                reviewCount = "70M Reviews",
                 modifier = Modifier.padding(
                     start = 24.dp,
                     end = 24.dp,
