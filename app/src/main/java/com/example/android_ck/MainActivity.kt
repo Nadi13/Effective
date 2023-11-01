@@ -26,16 +26,14 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun MainScreen() {
-    AppTheme {
         ApplySystemBarColors()
 
         Surface(
-            color = AppTheme.BgColors.primary,
+            color = AppTheme.BgColors.darkGrey,
             modifier = Modifier.fillMaxSize(),
         ) {
             DotaScreen()
         }
-    }
 }
 
 @Composable
