@@ -14,6 +14,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.material3.Text
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.android_ck.ui.theme.AppTheme
@@ -23,8 +24,18 @@ fun DotaScreen() {
     val context = LocalContext.current
     val lazyListState = rememberLazyListState()
     val comments = listOf(
-        "Once you start to learn its secrets, there’s a wild and exciting variety of play here that’s unmatched, even by its peers.",
-        "Once you start to learn its secrets, there’s a wild and exciting variety of play here that’s unmatched, even by its peers."
+        CommentUi(
+            image = R.drawable.avatar1,
+            name = stringResource(R.string.userName1),
+            date = stringResource(R.string.date1),
+            text = stringResource(R.string.comment1)
+        ),
+        CommentUi(
+            image = R.drawable.avatar2,
+            name = stringResource(R.string.userName2),
+            date = stringResource(R.string.date2),
+            text = stringResource(R.string.comment2)
+        )
     )
 
     LazyColumn(
@@ -37,14 +48,20 @@ fun DotaScreen() {
 
         item {
             ScrollableChipsRow(
-                items = listOf("MOBA", "MULTIPLAYER", "STRATEGY", "Drab Majesty", "Cold Cave", "Lifeover", "The Door"),
+                items = listOf(stringResource(R.string.obj1),
+                                stringResource(R.string.obj2),
+                                stringResource(R.string.obj3),
+                                stringResource(R.string.obj4),
+                                stringResource(R.string.obj5),
+                                stringResource(R.string.obj6),
+                                stringResource(R.string.obj7)),
                 modifier = Modifier.padding(top = 16.dp, bottom = 16.dp),
                 contentPadding = PaddingValues(start = 24.dp, end = 24.dp),
             )
         }
         item{
             Text(
-                text = "Dota 2 is a multiplayer online battle arena (MOBA) game which has two teams of five players compete to collectively destroy a large structure defended by the opposing team known as the \"Ancient\", whilst defending their own.",
+                text = stringResource(R.string.describe),
                 style = AppTheme.TextStyle.Regular_12_19,
                 color = AppTheme.TextColors.secondery,
                 modifier = Modifier.padding(
@@ -67,7 +84,7 @@ fun DotaScreen() {
         }
         item{
             Text(
-                text = "Review & Rating",
+                text = stringResource(R.string.review),
                 style = AppTheme.TextStyle.Bold_16,
                 color = AppTheme.TextColors.primary,
                 modifier = Modifier.padding(
@@ -79,7 +96,7 @@ fun DotaScreen() {
             )
             RatingBlock(
                 rating = 4.9f,
-                reviewCount = "70M Reviews",
+                reviewCount = stringResource(R.string.rating),
                 modifier = Modifier.padding(
                     start = 24.dp,
                     end = 24.dp,
@@ -112,7 +129,7 @@ fun DotaScreen() {
         }
         item{
             PrimaryButton(
-                text = "Install",
+                text = stringResource(R.string.install),
                 onClick = {
                     Toast.makeText(context, "CLICKED", Toast.LENGTH_LONG).show()
                 },
@@ -129,10 +146,11 @@ fun DotaScreen() {
     }
 }
 
+
 @Preview
 @Composable
 fun DotaScreenPreview(){
-    Surface(color = AppTheme.BgColors.darkGrey)
+    Surface(color = AppTheme.BgColors.primary)
     {
         DotaScreen()
     }

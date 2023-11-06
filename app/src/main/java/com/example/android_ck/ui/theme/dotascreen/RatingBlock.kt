@@ -10,6 +10,7 @@ import com.example.android_ck.ui.theme.AppTheme
 import android.widget.RatingBar;
 import androidx.compose.foundation.layout.*
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 
 @Composable
 fun RatingBlock(
@@ -49,7 +50,7 @@ fun RatingBlock(
 fun RatingBlockPreview(){
      RatingBlock(
          rating = 4.9f,
-         reviewCount = "70M Reviews",
+         reviewCount = stringResource(R.string.rating),
          modifier = Modifier.padding(
              start = 24.dp,
              end = 24.dp,

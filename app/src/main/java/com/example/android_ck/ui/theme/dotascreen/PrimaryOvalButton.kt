@@ -15,6 +15,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.material3.Text
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.android_ck.ui.theme.AppTheme
 
@@ -30,8 +31,7 @@ fun PrimaryButton(
         modifier = modifier
             .fillMaxWidth()
             .padding(horizontal = 24.dp, vertical = 40.dp)
-            .fillMaxWidth()
-            .height(70.dp),
+            .height(64.dp),
         shape = RoundedCornerShape(12.dp),
     ){
         Text(
@@ -49,7 +49,7 @@ fun PrimaryButtonPreview(){
 
     val context = LocalContext.current
     PrimaryButton(
-        text = "Install",
+        text = stringResource(R.string.install),
         onClick = {
             Toast.makeText(context, "CLICKED", Toast.LENGTH_LONG).show()
         },

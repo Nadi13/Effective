@@ -17,6 +17,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.android_ck.ui.theme.AppTheme
 import androidx.compose.material3.Text
+import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.stringResource
 
 @Composable
 fun DotaScreenHeader(
@@ -30,9 +32,11 @@ fun DotaScreenHeader(
                 DotaLogo(
                     painter = painterResource(R.drawable.dota_logo),
                 ) {
-                    Column(modifier = Modifier.offset(105.dp, 17.dp).padding(top = 12.dp)) {
+                    Column(modifier = Modifier
+                        .offset(105.dp, 17.dp)
+                        .padding(top = 12.dp)) {
                         Text(
-                            text = "DoTA 2",
+                            text = stringResource(R.string.name_game),
                             style = AppTheme.TextStyle.Bold_20_26,
                             color = AppTheme.TextColors.primary
                         )
@@ -42,7 +46,7 @@ fun DotaScreenHeader(
                         ){
                             Row(modifier = Modifier.offset(85.dp, 0.dp)) {
                                 Text(
-                                    text = "70M",
+                                    text = stringResource(R.string.counter),
                                     style = AppTheme.TextStyle.Regular_12_05,
                                     color = AppTheme.TextColors.grey
                                 )
@@ -87,7 +91,8 @@ private fun DotaLogo(
         .border(
             width = 2.dp,
             color = AppTheme.BgColors.grey,
-            shape = RoundedCornerShape(13.5.dp))
+            shape = RoundedCornerShape(13.5.dp)
+        )
     ){
         Image(
             painter = painter,
@@ -124,7 +129,7 @@ private fun Stars(
 @Preview
 @Composable
 fun DotaScreenHeaderPreview(){
-    Surface(color = AppTheme.BgColors.darkGrey)
+    Surface(color = AppTheme.BgColors.primary)
     {
         DotaScreenHeader()
     }

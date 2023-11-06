@@ -18,6 +18,3 @@ val DarkColorScheme = darkColorScheme(
     tertiary = Color(color = 0xFFEFB8C8),
     background = Color(color = 0xFF1C1B1F)
 )
-
-
-

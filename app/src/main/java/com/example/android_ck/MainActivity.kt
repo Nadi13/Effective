@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.SideEffect
@@ -26,14 +27,17 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun MainScreen() {
+    MaterialTheme {
+
         ApplySystemBarColors()
 
         Surface(
-            color = AppTheme.BgColors.darkGrey,
+            color = AppTheme.BgColors.primary,
             modifier = Modifier.fillMaxSize(),
         ) {
             DotaScreen()
         }
+    }
 }
 
 @Composable

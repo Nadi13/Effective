@@ -51,4 +51,3 @@ fun VideoPreviewRowReview(){
     R.drawable.bg_video2,),
     contentPadding = PaddingValues(start = 24.dp, end = 24.dp))
 }
-
