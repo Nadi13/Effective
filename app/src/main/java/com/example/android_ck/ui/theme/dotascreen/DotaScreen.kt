@@ -120,6 +120,8 @@ fun DotaScreen() {
                     thickness = 1.dp,
                     modifier = Modifier
                         .padding(
+                            start = 38.dp,
+                            end = 37.dp,
                             top = 12.dp,
                             bottom = 10.dp
                         ),

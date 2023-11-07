@@ -16,6 +16,9 @@ object AppTheme {
         val grey = Color(color = 0xFF1F2430)
         val secondery = Color(color = 0xFF4682B4).copy(alpha = 0.24f)
         val divider = Color(color = 0xFF1A1F29)
+        val circuit = Color(color = 0x3DFFFFFF)
+        val third = Color(color = 0x76FFFFFF)
+        val white = Color(color = 0xFFFFFBFE)
 
     }
     object TextColors{

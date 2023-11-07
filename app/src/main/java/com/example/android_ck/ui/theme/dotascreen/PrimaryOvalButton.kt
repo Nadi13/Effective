@@ -30,7 +30,8 @@ fun PrimaryButton(
         colors = ButtonDefaults.buttonColors(Color(0xFFF4D144)),
         modifier = modifier
             .fillMaxWidth()
-            .padding(horizontal = 24.dp, vertical = 40.dp)
+            .padding(
+                vertical = 40.dp)
             .height(64.dp),
         shape = RoundedCornerShape(12.dp),
     ){
