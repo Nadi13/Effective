@@ -28,7 +28,15 @@ fun DotaScreenHeader(
         painter = painterResource(R.drawable.bg_header),
         modifier = modifier.fillMaxSize()
     ) {
-            Row(Modifier.padding(start = 24.dp, top = 330.dp)) {
+            Box(modifier = Modifier
+                .padding(
+                    top = 310.dp
+                )
+                .fillMaxWidth()
+                .size(375.dp, 50.dp)
+                .background(AppTheme.BgColors.primary,shape = RoundedCornerShape(30))
+            ){}
+            Row(Modifier.padding(start = 24.dp, top = 290.dp)) {
                 DotaLogo(
                     painter = painterResource(R.drawable.dota_logo),
                 ) {
